@@ -2,7 +2,8 @@
 OPENSSL_VERSION := 1.1.0c
 OPENSSL_URL := https://www.openssl.org/source/openssl-$(OPENSSL_VERSION).tar.gz
 
-OPENSSL_EXTRA_CONFIG_1=no-shared no-unit-test
+#OPENSSL_EXTRA_CONFIG_1=no-shared no-unit-test
+OPENSSL_EXTRA_CONFIG_1=no-shared no-unit-test -fvisibility=hidden 
 OPENSSL_EXTRA_CONFIG_2=
 
 ifdef HAVE_MACOSX
